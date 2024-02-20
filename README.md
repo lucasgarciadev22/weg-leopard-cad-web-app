@@ -1,2 +1,1 @@
-# weg-leopard-cad
-WEG Leopard Cad Web App Repository
+# WEG Leopard Cad Web App Repository
