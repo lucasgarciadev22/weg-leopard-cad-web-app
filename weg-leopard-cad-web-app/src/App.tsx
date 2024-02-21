@@ -6,9 +6,12 @@ import About from './components/About';
 import ReleaseNotes from './components/ReleaseNotes';
 import QuickGuide from './components/QuickGuide';
 import Navbar from './components/NavBar';
+import GlobalStyles from './styles/GlobalStyles';
 
 const App: React.FC = () => {
   return (
+    <>
+    <GlobalStyles/>
     <Router>
       <div>
         <Navbar />
@@ -20,6 +23,7 @@ const App: React.FC = () => {
         </Routes>
       </div>
     </Router>
+    </>
   );
 }
 

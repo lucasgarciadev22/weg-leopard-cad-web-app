@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const NavBar: React.FC = () => {
   return (
-    <BootstrapNavbar bg="light" expand="lg">
+    <BootstrapNavbar data-bs-theme="dark" expand="lg">
       <BootstrapNavbar.Brand href="/">WEG Leopard CAD</BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
