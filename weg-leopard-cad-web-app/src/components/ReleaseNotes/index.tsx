@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
+import { fetchReleaseNotes } from '../../backend/axios/AxiosFuncs';
+import { ReleaseNote } from '../../models/ReleaseNote';
 
 const ReleaseNotes: React.FC = () => {
+  const [releaseNotes, setReleaseNotes] = useState<ReleaseNote[]>([]);
+
+  useEffect(() => {
+    const fetchNotes = async () => {
+      try {
+        const notes = await fetchReleaseNotes(); // Use a função para obter os dados
+        setReleaseNotes(notes);
+      } catch (error) {
+        console.error('Error fetching release notes:', error);
+      }
+    };
+
+    fetchNotes();
+  }, []);
+
   return (
     <div>
       <h2>Release Notes</h2>
@@ -13,33 +30,22 @@ const ReleaseNotes: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>23.0.1 - 23.0.4</td>
-            <td>📦 This is the #1 preview for the new SWIG packages. Use it at your own risk.
-              <ul>
-                <li>New features of highlight</li>
-                <li>Reimplementations of several tools</li>
-                <li>New minor features for several tools</li>
-                <li>Improved overall performance & safety</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>23.0.5</td>
-            <td>📦 This is the #2 preview for the new SWIG packages. ⚠️ Use it at your own risk.
-              <ul>
-                <li>New Table tool</li>
-                <li>Bugfix for command line culture parser and submodes</li>
-                <li>Reimplemented Properties Palette</li>
-                <li>Reimplemented several Views and ViewModels to XAML behaviours (on going task to remove Caliburn)</li>
-                <li>Improved overall performance & safety</li>
-              </ul>
-            </td>
-          </tr>
+          {releaseNotes.map((releaseNote, index) => (
+            <tr key={index}>
+              <td>{releaseNote.version}</td>
+              <td>
+                <ul>
+                  {releaseNote.mainChanges.map((change, index) => (
+                    <li key={index}>{change}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>
   );
-}
+};
 
 export default ReleaseNotes;
