@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { Table } from "react-bootstrap";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -16,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
     --white-100: #ffffff; /* Branco puro */
     --white-200: #f0f0f0; /* Branco mais claro */
     --white-300: #e0e0e0; /* Branco ainda mais claro */
+
+    --gray-100: #444444; /* Cor de fundo do código */
+
   }
 
   body {
@@ -47,6 +51,16 @@ const GlobalStyles = createGlobalStyle`
   p, li {
     color: var(--white-100); /* Use a variável de cor do branco puro para texto normal */
   }
+
+  div{
+    margin: 8px;
+    border-radius: 8px;
+  }
 `;
 
 export default GlobalStyles;
+
+export const GlobalTable = styled(Table)`
+  border-radius: 8px;
+  border: dashed 1px var(--gray-100);
+`;

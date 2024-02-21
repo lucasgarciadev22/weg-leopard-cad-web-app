@@ -49,6 +49,16 @@
             "[UNDO] - Desfazer última alteração",
             "[REDO] - Refazer última alteração"
           ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "General Commands",
+          "commands": [
+            "[CLS, CLEAR] - Limpar CommandLine",
+            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
+            "[UNDO] - Desfazer última alteração",
+            "[REDO] - Refazer última alteração"
+          ]
         }
       ]
     }

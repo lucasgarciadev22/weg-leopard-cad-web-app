@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import { fetchReleaseNotes } from '../../backend/axios/AxiosFuncs';
-import { ReleaseNote } from '../../models/ReleaseNote';
+import React, { useState, useEffect } from "react";
+import { Table } from "react-bootstrap";
+import { fetchReleaseNotes } from "../../backend/axios/AxiosFuncs";
+import { ReleaseNote } from "../../models/ReleaseNote";
+import { GlobalTable } from "../../styles/GlobalStyles";
 
 const ReleaseNotes: React.FC = () => {
   const [releaseNotes, setReleaseNotes] = useState<ReleaseNote[]>([]);
@@ -12,7 +13,7 @@ const ReleaseNotes: React.FC = () => {
         const notes = await fetchReleaseNotes();
         setReleaseNotes(notes);
       } catch (error) {
-        console.error('Error fetching release notes:', error);
+        console.error("Error fetching release notes:", error);
       }
     };
 
@@ -20,9 +21,9 @@ const ReleaseNotes: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <h2>Release Notes</h2>
-      <Table variant="dark">
+      <GlobalTable variant="dark">
         <thead>
           <tr>
             <th>Version</th>
@@ -43,8 +44,8 @@ const ReleaseNotes: React.FC = () => {
             </tr>
           ))}
         </tbody>
-      </Table>
-    </div>
+      </GlobalTable>
+    </>
   );
 };
 

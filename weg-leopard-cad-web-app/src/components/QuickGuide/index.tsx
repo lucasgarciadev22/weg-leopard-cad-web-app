@@ -9,6 +9,7 @@ import {
   Section,
 } from "../../models/QuickGuide";
 import { GuideAccordion, GuideCard } from "./styles";
+import ReactMarkdown from "react-markdown";
 
 const QuickGuide: React.FC = () => {
   const [guideData, setGuideData] = useState<Section[]>();
@@ -34,14 +35,18 @@ const QuickGuide: React.FC = () => {
         return (
           <>
             <h4>{toolSubsection.name}</h4>
-            {toolSubsection.text && <p>{toolSubsection.text.concat("\n")}</p>}
+            {toolSubsection.text && (
+              <ReactMarkdown>{toolSubsection.text.concat("\n")}</ReactMarkdown>
+            )}
             {toolSubsection.shortcuts && (
-              <p>Shortcuts: {toolSubsection.shortcuts}</p>
+              <ReactMarkdown>{`Shortcuts: ${toolSubsection.shortcuts}`}</ReactMarkdown>
             )}
             {toolSubsection.steps && (
               <ul>
                 {toolSubsection.steps.map((step, stepIndex) => (
-                  <li key={stepIndex}>{step}</li>
+                  <li key={stepIndex}>
+                    <ReactMarkdown>{step}</ReactMarkdown>
+                  </li>
                 ))}
               </ul>
             )}
@@ -53,7 +58,9 @@ const QuickGuide: React.FC = () => {
           <>
             <h4>{commandListSubsection.name}</h4>
             {commandListSubsection.text && (
-              <p>{commandListSubsection.text.concat("\n")}</p>
+              <ReactMarkdown>
+                {commandListSubsection.text.concat("\n")}
+              </ReactMarkdown>
             )}
             {commandListSubsection.commands && (
               <ul>
@@ -70,7 +77,7 @@ const QuickGuide: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <h2>Quick Guide</h2>
       <GuideAccordion flush>
         {guideData?.map((section, index) => (
@@ -80,7 +87,7 @@ const QuickGuide: React.FC = () => {
               <Accordion.Collapse eventKey={index.toString()}>
                 <GuideCard>
                   <div>
-                    <p>{section.description}</p>
+                    <ReactMarkdown>{section.description}</ReactMarkdown>
                     {section.subsections?.map((subsection, subIndex) => (
                       <div key={subIndex}>{renderSubsection(subsection)}</div>
                     ))}
@@ -91,7 +98,7 @@ const QuickGuide: React.FC = () => {
           </Accordion.Item>
         ))}
       </GuideAccordion>
-    </div>
+    </>
   );
 };
 
