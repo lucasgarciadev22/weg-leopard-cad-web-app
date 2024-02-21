@@ -9,7 +9,7 @@ const ReleaseNotes: React.FC = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const notes = await fetchReleaseNotes(); // Use a função para obter os dados
+        const notes = await fetchReleaseNotes();
         setReleaseNotes(notes);
       } catch (error) {
         console.error('Error fetching release notes:', error);

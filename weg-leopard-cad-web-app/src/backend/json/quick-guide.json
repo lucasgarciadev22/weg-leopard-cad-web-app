@@ -1,0 +1,56 @@
+{
+  "quick-guide": [
+    {
+      "header": "Working with Tools",
+      "description": "Quick guide about using tools in Leopard",
+      "subsections": [
+        {
+          "type": "tool-subsection",
+          "name": "Arc Tool",
+          "shortcuts": "`A` ou `Arc`",
+          "steps": [
+            "1. Clique na tela ou digite a coordenada na *Command Line* para o ponto base do arco",
+            "2. Clique na tela ou digite a coordenada na *Command Line* para ponto de curvatura do arco",
+            "3. Clique na tela ou digite a coordenada na *Command Line* para ponto final do arco"
+          ]
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Arc Tool",
+          "shortcuts": "`A` ou `Arc`",
+          "steps": [
+            "1. Clique na tela ou digite a coordenada na *Command Line* para o ponto base do arco",
+            "2. Clique na tela ou digite a coordenada na *Command Line* para ponto de curvatura do arco",
+            "3. Clique na tela ou digite a coordenada na *Command Line* para ponto final do arco"
+          ]
+        }
+      ]
+    },
+    {
+      "header": "Working with Command Line",
+      "description": "Quick guide about using commands in Leopard",
+      "subsections": [
+        {
+          "type": "command-list-subsection",
+          "name": "General Commands",
+          "commands": [
+            "[CLS, CLEAR] - Limpar CommandLine",
+            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
+            "[UNDO] - Desfazer última alteração",
+            "[REDO] - Refazer última alteração"
+          ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "General Commands",
+          "commands": [
+            "[CLS, CLEAR] - Limpar CommandLine",
+            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
+            "[UNDO] - Desfazer última alteração",
+            "[REDO] - Refazer última alteração"
+          ]
+        }
+      ]
+    }
+  ]
+}

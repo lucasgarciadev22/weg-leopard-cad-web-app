@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -44,10 +44,9 @@ const GlobalStyles = createGlobalStyle`
     color: var(--yellow-200); /* Use a variável de cor do amarelo médio para subtítulos */
   }
 
-  p {
+  p, li {
     color: var(--white-100); /* Use a variável de cor do branco puro para texto normal */
   }
 `;
 
 export default GlobalStyles;
-
