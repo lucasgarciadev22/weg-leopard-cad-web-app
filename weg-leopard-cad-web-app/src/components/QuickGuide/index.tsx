@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { Section, Subsection } from "../../models/QuickGuide";
 import { GuideCard, GuideCardContent, GuideSubCard } from "./styles";
-
-const iconsSrc = "../../images/tool-icons/";
+import { getIcon } from "../../services/IconServices";
 
 const QuickGuide: React.FC<{
   setSelectedSubsection: (subsection: Subsection) => void;
@@ -52,7 +51,7 @@ const QuickGuide: React.FC<{
                 >
                   {subsection.icon && (
                     <img
-                      src={`${iconsSrc}${subsection.icon}`}
+                      src={getIcon(subsection.icon)}
                       height={25}
                       alt="Icon"
                     />

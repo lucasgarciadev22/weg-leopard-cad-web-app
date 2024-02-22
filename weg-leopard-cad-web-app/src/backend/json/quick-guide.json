@@ -7,7 +7,7 @@
         {
           "type": "tool-subsection",
           "name": "Arc Tool",
-          "icon": "arcc.png",
+          "icon": "arcc",
           "text": "",
           "shortcuts": "`A` ou `Arc`",
           "steps": [
@@ -19,7 +19,7 @@
         {
           "type": "tool-subsection",
           "name": "Line Tool",
-          "icon": "line.png",
+          "icon": "line",
           "text": [
             "Caso seja passado somente o comprimento para o segundo ponto em diante, a linha será uma linha reta, em `x`,",
             " que terá o valor passado como a distância entre seu ponto inicial e seu ponto final"
