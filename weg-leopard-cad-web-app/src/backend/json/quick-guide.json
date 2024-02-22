@@ -9,11 +9,11 @@
           "name": "Arc Tool",
           "icon": "arcc",
           "text": "",
-          "shortcuts": "`A` ou `Arc`",
+          "shortcuts": "`A` or `Arc`",
           "steps": [
-            "1. Clique na tela ou digite a coordenada na *Command Line* para o ponto base do arco",
-            "2. Clique na tela ou digite a coordenada na *Command Line* para ponto de curvatura do arco",
-            "3. Clique na tela ou digite a coordenada na *Command Line* para ponto final do arco"
+            "1. Click on the screen or type the coordinate in the Command Line for the base point of the arc.",
+            "2. Click on the screen or type the coordinate in the Command Line for the curvature point of the arc.",
+            "3. Click on the screen or type the coordinate in the Command Line for the end point of the arc."
           ]
         },
         {
@@ -21,13 +21,12 @@
           "name": "Line Tool",
           "icon": "line",
           "text": [
-            "Caso seja passado somente o comprimento para o segundo ponto em diante, a linha será uma linha reta, em `x`,",
-            " que terá o valor passado como a distância entre seu ponto inicial e seu ponto final"
+            "If only the length is passed for the second point onwards, the line will be a straight line, in `x`, which will have the passed value as the distance between its initial and final points."
           ],
-          "shortcuts": "`L ,LI ou Line`",
+          "shortcuts": "`L ,LI or Line`",
           "steps": [
-            "1. Clique na tela ou digite a coordenada na *Command Line* para o primeiro ponto ",
-            "2. Clique na tela, digite a coordenada na *Command Line* ou passe o valor de seu comprimento para os próximos pontos"
+            "1. Click on the screen or type the coordinate in the Command Line for the first point.",
+            "2. Click on the screen, type the coordinate in the Command Line, or pass the value of its length for the next points."
           ]
         }
       ]

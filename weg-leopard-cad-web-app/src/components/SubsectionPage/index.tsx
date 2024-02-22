@@ -8,6 +8,8 @@ import {
 } from "../../models/QuickGuide";
 import ReactMarkdown from "react-markdown";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface SubsectionPageProps {
   receivedSubsection?: Subsection;
@@ -75,7 +77,23 @@ const SubsectionPage: React.FC<SubsectionPageProps> = ({
             </ul>
           )}
           {(subsection as ToolSubsection).text && (
-            <ReactMarkdown>{subsection?.text.join("\n")}</ReactMarkdown>
+            <>
+              {subsection.text.map((text, index) => (
+                <div key={index}>
+                  {text.startsWith("```csharp") ? (
+                    <SyntaxHighlighter language="csharp" style={atomDark}>
+                      {text.replace("```csharp", "")}
+                    </SyntaxHighlighter>
+                  ) : text.startsWith("```XAML") ? (
+                    <SyntaxHighlighter language="xml" style={atomDark}>
+                      {text.replace("```XAML", "")}
+                    </SyntaxHighlighter>
+                  ) : (
+                    <ReactMarkdown>{text}</ReactMarkdown>
+                  )}
+                </div>
+              ))}
+            </>
           )}
         </div>
       )}
