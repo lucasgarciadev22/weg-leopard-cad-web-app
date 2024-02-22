@@ -7,6 +7,7 @@ export interface Subsection {
   type: SubsectionType;
   name: string;
   text: string[];
+  icon: string;
 }
 
 export interface ToolSubsection extends Subsection {

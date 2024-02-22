@@ -7,6 +7,7 @@
         {
           "type": "tool-subsection",
           "name": "Arc Tool",
+          "icon": "arcc.png",
           "text": "",
           "shortcuts": "`A` ou `Arc`",
           "steps": [
@@ -18,6 +19,7 @@
         {
           "type": "tool-subsection",
           "name": "Line Tool",
+          "icon": "line.png",
           "text": [
             "Caso seja passado somente o comprimento para o segundo ponto em diante, a linha será uma linha reta, em `x`,",
             " que terá o valor passado como a distância entre seu ponto inicial e seu ponto final"
@@ -38,30 +40,30 @@
           "type": "command-list-subsection",
           "name": "General Commands",
           "commands": [
-            "[CLS, CLEAR] - Limpar CommandLine",
-            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
-            "[UNDO] - Desfazer última alteração",
-            "[REDO] - Refazer última alteração"
+            "`[CLS, CLEAR]` - Limpar CommandLine",
+            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
+            "`[UNDO]` - Desfazer última alteração",
+            "`[REDO]` - Refazer última alteração"
           ]
         },
         {
           "type": "command-list-subsection",
           "name": "New Commands",
           "commands": [
-            "[CLS, CLEAR] - Limpar CommandLine",
-            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
-            "[UNDO] - Desfazer última alteração",
-            "[REDO] - Refazer última alteração"
+            "`[CLS, CLEAR]` - Limpar CommandLine",
+            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
+            "`[UNDO]` - Desfazer última alteração",
+            "`[REDO]` - Refazer última alteração"
           ]
         },
         {
           "type": "command-list-subsection",
           "name": "Old Commands",
           "commands": [
-            "[CLS, CLEAR] - Limpar CommandLine",
-            "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
-            "[UNDO] - Desfazer última alteração",
-            "[REDO] - Refazer última alteração"
+            "`[CLS, CLEAR]` - Limpar CommandLine",
+            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
+            "`[UNDO]` - Desfazer última alteração",
+            "`[REDO]` - Refazer última alteração"
           ]
         }
       ]

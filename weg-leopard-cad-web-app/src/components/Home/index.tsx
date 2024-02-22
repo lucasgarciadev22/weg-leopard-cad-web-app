@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <div>
       <img src={logo} height={150} />
       <br />
-      <h1>Welcome to WEG Leopard CAD</h1>
+      <h1>Welcome to WEG Leopard CAD Center</h1>
     </div>
   );
 };

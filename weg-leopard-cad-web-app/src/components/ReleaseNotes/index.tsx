@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "react-bootstrap";
 import { fetchReleaseNotes } from "../../backend/axios/AxiosFuncs";
 import { ReleaseNote } from "../../models/ReleaseNote";
-import { GlobalTable } from "../../styles/GlobalStyles";
+import { ReleaseNotesTable } from "./styles";
 
 const ReleaseNotes: React.FC = () => {
   const [releaseNotes, setReleaseNotes] = useState<ReleaseNote[]>([]);
@@ -22,8 +21,9 @@ const ReleaseNotes: React.FC = () => {
 
   return (
     <>
-      <h2>Release Notes</h2>
-      <GlobalTable variant="dark">
+      <h1>Release Notes</h1>
+      <br />
+      <ReleaseNotesTable>
         <thead>
           <tr>
             <th>Version</th>
@@ -44,7 +44,7 @@ const ReleaseNotes: React.FC = () => {
             </tr>
           ))}
         </tbody>
-      </GlobalTable>
+      </ReleaseNotesTable>
     </>
   );
 };

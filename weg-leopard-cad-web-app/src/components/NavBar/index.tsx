@@ -1,12 +1,14 @@
-// src/components/Navbar.tsx
-import React from 'react';
-import { Nav, Navbar as BootstrapNavbar } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from "react";
+import { Nav, Navbar as BootstrapNavbar } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import brandname from "../../images/leopard_text.png";
 
 const NavBar: React.FC = () => {
   return (
     <BootstrapNavbar data-bs-theme="dark" expand="lg">
-      <BootstrapNavbar.Brand href="/">WEG Leopard CAD</BootstrapNavbar.Brand>
+      <BootstrapNavbar.Brand href="/">
+        <img src={brandname} height={24} alt="WEG Leopard CAD Logo" />
+      </BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -26,6 +28,6 @@ const NavBar: React.FC = () => {
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>
   );
-}
+};
 
 export default NavBar;

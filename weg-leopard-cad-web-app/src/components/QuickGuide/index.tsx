@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { Section, Subsection } from "../../models/QuickGuide";
-import { GuideCard } from "./styles";
+import { GuideCard, GuideCardContent, GuideSubCard } from "./styles";
+
+const iconsSrc = "../../images/tool-icons/";
 
 const QuickGuide: React.FC<{
   setSelectedSubsection: (subsection: Subsection) => void;
@@ -36,30 +38,29 @@ const QuickGuide: React.FC<{
       <h1>Quick Guide</h1>
       <br />
       {guideData?.map((section, index) => (
-        <GuideCard
-          key={index}
-          style={{ marginBottom: "20px", backgroundColor: "var(--gray-100)" }}
-        >
+        <GuideCard key={index}>
           <GuideCard.Body>
             <GuideCard.Title>
               <h3>{section.header}</h3>
             </GuideCard.Title>
             <GuideCard.Text>{section.description}</GuideCard.Text>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <GuideSubCard>
               {section.subsections?.map((subsection, subIndex) => (
-                <div
+                <GuideCardContent
                   key={subIndex}
-                  style={{
-                    marginRight: "10px",
-                    marginBottom: "10px",
-                    cursor: "pointer",
-                  }}
                   onClick={() => handleSubsectionClick(subsection)}
                 >
+                  {subsection.icon && (
+                    <img
+                      src={`${iconsSrc}${subsection.icon}`}
+                      height={25}
+                      alt="Icon"
+                    />
+                  )}
                   <h6>{subsection.name}</h6>
-                </div>
+                </GuideCardContent>
               ))}
-            </div>
+            </GuideSubCard>
           </GuideCard.Body>
         </GuideCard>
       ))}
