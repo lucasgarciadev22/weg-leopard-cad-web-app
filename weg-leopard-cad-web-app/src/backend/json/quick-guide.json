@@ -7,6 +7,7 @@
         {
           "type": "tool-subsection",
           "name": "Arc Tool",
+          "text": "",
           "shortcuts": "`A` ou `Arc`",
           "steps": [
             "1. Clique na tela ou digite a coordenada na *Command Line* para o ponto base do arco",
@@ -16,12 +17,15 @@
         },
         {
           "type": "tool-subsection",
-          "name": "Arc Tool",
-          "shortcuts": "`A` ou `Arc`",
+          "name": "Line Tool",
+          "text": [
+            "Caso seja passado somente o comprimento para o segundo ponto em diante, a linha será uma linha reta, em `x`,",
+            " que terá o valor passado como a distância entre seu ponto inicial e seu ponto final"
+          ],
+          "shortcuts": "`L ,LI ou Line`",
           "steps": [
-            "1. Clique na tela ou digite a coordenada na *Command Line* para o ponto base do arco",
-            "2. Clique na tela ou digite a coordenada na *Command Line* para ponto de curvatura do arco",
-            "3. Clique na tela ou digite a coordenada na *Command Line* para ponto final do arco"
+            "1. Clique na tela ou digite a coordenada na *Command Line* para o primeiro ponto ",
+            "2. Clique na tela, digite a coordenada na *Command Line* ou passe o valor de seu comprimento para os próximos pontos"
           ]
         }
       ]
@@ -42,7 +46,7 @@
         },
         {
           "type": "command-list-subsection",
-          "name": "General Commands",
+          "name": "New Commands",
           "commands": [
             "[CLS, CLEAR] - Limpar CommandLine",
             "[UPDATEGRAPHICS] - Atualiza os gráficos da View",
@@ -52,7 +56,7 @@
         },
         {
           "type": "command-list-subsection",
-          "name": "General Commands",
+          "name": "Old Commands",
           "commands": [
             "[CLS, CLEAR] - Limpar CommandLine",
             "[UPDATEGRAPHICS] - Atualiza os gráficos da View",

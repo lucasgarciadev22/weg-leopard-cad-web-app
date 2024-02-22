@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Accordion, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
-import {
-  Subsection,
-  SubsectionType,
-  ToolSubsection,
-  CommandListSubsection,
-  Section,
-} from "../../models/QuickGuide";
-import { GuideAccordion, GuideCard } from "./styles";
-import ReactMarkdown from "react-markdown";
+import { Section, Subsection } from "../../models/QuickGuide";
 
-const QuickGuide: React.FC = () => {
+const QuickGuide: React.FC<{
+  setSelectedSubsection: (subsection: Subsection) => void;
+}> = ({ setSelectedSubsection }) => {
   const [guideData, setGuideData] = useState<Section[]>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchGuideData = async () => {
@@ -28,76 +24,45 @@ const QuickGuide: React.FC = () => {
     fetchGuideData();
   }, []);
 
-  const renderSubsection = (subsection: Subsection) => {
-    switch (subsection.type) {
-      case SubsectionType.TOOL_SUBSECTION:
-        const toolSubsection = subsection as ToolSubsection;
-        return (
-          <>
-            <h4>{toolSubsection.name}</h4>
-            {toolSubsection.text && (
-              <ReactMarkdown>{toolSubsection.text.concat("\n")}</ReactMarkdown>
-            )}
-            {toolSubsection.shortcuts && (
-              <ReactMarkdown>{`Shortcuts: ${toolSubsection.shortcuts}`}</ReactMarkdown>
-            )}
-            {toolSubsection.steps && (
-              <ul>
-                {toolSubsection.steps.map((step, stepIndex) => (
-                  <li key={stepIndex}>
-                    <ReactMarkdown>{step}</ReactMarkdown>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </>
-        );
-      case SubsectionType.COMMAND_LIST_SUBSECTION:
-        const commandListSubsection = subsection as CommandListSubsection;
-        return (
-          <>
-            <h4>{commandListSubsection.name}</h4>
-            {commandListSubsection.text && (
-              <ReactMarkdown>
-                {commandListSubsection.text.concat("\n")}
-              </ReactMarkdown>
-            )}
-            {commandListSubsection.commands && (
-              <ul>
-                {commandListSubsection.commands.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
-                ))}
-              </ul>
-            )}
-          </>
-        );
-      default:
-        return null;
-    }
+  const handleSubsectionClick = (subsection: Subsection) => {
+    setSelectedSubsection(subsection);
+    navigate(
+      `/quick-guide/${subsection.name.toLowerCase().replace(/\s+/g, "-")}`
+    );
   };
 
   return (
     <>
-      <h2>Quick Guide</h2>
-      <GuideAccordion flush>
-        {guideData?.map((section, index) => (
-          <Accordion.Item eventKey={index.toString()} key={index}>
-            <Accordion.Header>{section.header}</Accordion.Header>
-            <Accordion.Body>
-              <Accordion.Collapse eventKey={index.toString()}>
-                <GuideCard>
-                  <div>
-                    <ReactMarkdown>{section.description}</ReactMarkdown>
-                    {section.subsections?.map((subsection, subIndex) => (
-                      <div key={subIndex}>{renderSubsection(subsection)}</div>
-                    ))}
-                  </div>
-                </GuideCard>
-              </Accordion.Collapse>
-            </Accordion.Body>
-          </Accordion.Item>
-        ))}
-      </GuideAccordion>
+      <h1>Quick Guide</h1>
+      <br />
+      {guideData?.map((section, index) => (
+        <Card
+          key={index}
+          style={{ marginBottom: "20px", backgroundColor: "var(--gray-100)" }}
+        >
+          <Card.Body>
+            <Card.Title>
+              <h3>{section.header}</h3>
+            </Card.Title>
+            <Card.Text>{section.description}</Card.Text>
+            <div style={{ display: "flex", flexWrap: "wrap" }}>
+              {section.subsections?.map((subsection, subIndex) => (
+                <div
+                  key={subIndex}
+                  style={{
+                    marginRight: "10px",
+                    marginBottom: "10px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => handleSubsectionClick(subsection)}
+                >
+                  <h6>{subsection.name}</h6>
+                </div>
+              ))}
+            </div>
+          </Card.Body>
+        </Card>
+      ))}
     </>
   );
 };

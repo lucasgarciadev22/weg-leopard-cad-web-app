@@ -6,7 +6,7 @@ export enum SubsectionType {
 export interface Subsection {
   type: SubsectionType;
   name: string;
-  text: string;
+  text: string[];
 }
 
 export interface ToolSubsection extends Subsection {
