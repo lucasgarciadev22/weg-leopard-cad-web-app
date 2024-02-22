@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { Section, Subsection } from "../../models/QuickGuide";
+import { GuideCard } from "./styles";
 
 const QuickGuide: React.FC<{
   setSelectedSubsection: (subsection: Subsection) => void;
@@ -36,15 +36,15 @@ const QuickGuide: React.FC<{
       <h1>Quick Guide</h1>
       <br />
       {guideData?.map((section, index) => (
-        <Card
+        <GuideCard
           key={index}
           style={{ marginBottom: "20px", backgroundColor: "var(--gray-100)" }}
         >
-          <Card.Body>
-            <Card.Title>
+          <GuideCard.Body>
+            <GuideCard.Title>
               <h3>{section.header}</h3>
-            </Card.Title>
-            <Card.Text>{section.description}</Card.Text>
+            </GuideCard.Title>
+            <GuideCard.Text>{section.description}</GuideCard.Text>
             <div style={{ display: "flex", flexWrap: "wrap" }}>
               {section.subsections?.map((subsection, subIndex) => (
                 <div
@@ -60,8 +60,8 @@ const QuickGuide: React.FC<{
                 </div>
               ))}
             </div>
-          </Card.Body>
-        </Card>
+          </GuideCard.Body>
+        </GuideCard>
       ))}
     </>
   );

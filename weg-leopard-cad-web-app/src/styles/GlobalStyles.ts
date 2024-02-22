@@ -36,20 +36,20 @@ const GlobalStyles = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-    background-color: var(--code-background-color); /* Use a variável de cor de fundo do código */
-    color: var(--code-text-color); /* Use a variável de cor do texto do código */
+    background-color: var(--code-background-color); 
+    color: var(--code-text-color); 
   }
 
   h1, h2, h3 {
-    color: var(--yellow-100); /* Use a variável de cor do amarelo mais claro para títulos */
+    color: var(--yellow-100); 
   }
 
   h4, h5, h6 {
-    color: var(--yellow-200); /* Use a variável de cor do amarelo médio para subtítulos */
+    color: var(--yellow-200);
   }
 
   p, li {
-    color: var(--white-100); /* Use a variável de cor do branco puro para texto normal */
+    color: var(--white-100);
   }
 
   div{
@@ -62,5 +62,6 @@ export default GlobalStyles;
 
 export const GlobalTable = styled(Table)`
   border-radius: 8px;
+  background-color: var(--code-background-color);
   border: dashed 1px var(--gray-100);
 `;
