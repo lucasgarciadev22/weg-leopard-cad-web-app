@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Accordion } from "react-bootstrap";
-import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { GuideAccordion, GuideCard } from "./styles";
 import ReactMarkdown from "react-markdown";
+import { fetchQuickGuideData } from "../../../backend/axios/AxiosFuncs";
 import {
   Section,
   Subsection,
   SubsectionType,
   ToolSubsection,
   CommandListSubsection,
-} from "../../frontend/models/QuickGuide";
+} from "../../models/QuickGuide";
 
 const QuickGuide: React.FC = () => {
   const [guideData, setGuideData] = useState<Section[]>();

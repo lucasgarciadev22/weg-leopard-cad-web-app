@@ -1,12 +1,11 @@
-// src/App.tsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
 import { Navbar } from "react-bootstrap";
-import About from "../components/About";
-import Home from "../components/Home";
-import QuickGuide from "../components/QuickGuide";
-import ReleaseNotes from "../components/ReleaseNotes";
+import About from "./components/About";
+import Home from "./components/Home";
+import QuickGuide from "./components/QuickGuide";
+import ReleaseNotes from "./components/ReleaseNotes";
 
 const App: React.FC = () => {
   return (
