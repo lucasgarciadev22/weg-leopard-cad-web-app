@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "react-bootstrap";
-import { fetchReleaseNotes } from "../../backend/axios/AxiosFuncs";
+import { fetchReleaseNotes } from "../../../backend/axios/AxiosFuncs";
 import { ReleaseNote } from "../../models/ReleaseNote";
 import { GlobalTable } from "../../styles/GlobalStyles";
 

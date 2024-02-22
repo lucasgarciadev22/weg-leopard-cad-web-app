@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Accordion, Card } from "react-bootstrap";
-import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
+import { Accordion } from "react-bootstrap";
+import { GuideAccordion, GuideCard } from "./styles";
+import ReactMarkdown from "react-markdown";
+import { fetchQuickGuideData } from "../../../backend/axios/AxiosFuncs";
 import {
+  Section,
   Subsection,
   SubsectionType,
   ToolSubsection,
   CommandListSubsection,
-  Section,
 } from "../../models/QuickGuide";
-import { GuideAccordion, GuideCard } from "./styles";
-import ReactMarkdown from "react-markdown";
 
 const QuickGuide: React.FC = () => {
   const [guideData, setGuideData] = useState<Section[]>();
@@ -85,14 +85,16 @@ const QuickGuide: React.FC = () => {
             <Accordion.Header>{section.header}</Accordion.Header>
             <Accordion.Body>
               <Accordion.Collapse eventKey={index.toString()}>
-                <GuideCard>
-                  <div>
-                    <ReactMarkdown>{section.description}</ReactMarkdown>
-                    {section.subsections?.map((subsection, subIndex) => (
-                      <div key={subIndex}>{renderSubsection(subsection)}</div>
-                    ))}
-                  </div>
-                </GuideCard>
+                <div>
+                  <GuideCard>
+                    <div>
+                      <ReactMarkdown>{section.description}</ReactMarkdown>
+                      {section.subsections?.map((subsection, subIndex) => (
+                        <div key={subIndex}>{renderSubsection(subsection)}</div>
+                      ))}
+                    </div>
+                  </GuideCard>
+                </div>
               </Accordion.Collapse>
             </Accordion.Body>
           </Accordion.Item>
