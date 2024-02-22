@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
-import { Section } from "../../frontend/models/QuickGuide";
-import { ReleaseNote } from "../../frontend/models/ReleaseNote";
+import { ReleaseNote } from "../../models/ReleaseNote";
+import { Section } from "../../models/QuickGuide";
 
 const baseUrl = "http://10.1.66.57:";
 
