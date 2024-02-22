@@ -56,6 +56,28 @@ const GlobalStyles = createGlobalStyle`
     margin: 8px;
     border-radius: 8px;
   }
+
+  .accordion-button {
+    border-radius: 8px;
+    color: var(--yellow-300);
+    background-color: var(--code-background-color) !important;
+  }
+
+  .accordion-button:focus {
+    border-radius: 8px;
+    color: var(--white-300);
+    box-shadow: none;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: var(--white-300);
+    border-radius: 8px;
+    background-color: var(--code-background-color) !important;
+  }
+
+  .accordion-item{
+    background-color: var(--background-color);
+  }
 `;
 
 export default GlobalStyles;
