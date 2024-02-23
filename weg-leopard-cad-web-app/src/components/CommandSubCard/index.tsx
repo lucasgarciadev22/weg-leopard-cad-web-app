@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { CommandListSubsection, Subsection } from "../../models/QuickGuide";
-import { CodeOutlined } from "@mui/icons-material";
+import { CodeOutlined, KeyboardHideOutlined } from "@mui/icons-material";
 import { ICON_SIZE, IconWrapper } from "../../styles/GlobalStyles";
 
 const CommandSubCard: React.FC<{ subsection: Subsection }> = ({
@@ -9,7 +9,7 @@ const CommandSubCard: React.FC<{ subsection: Subsection }> = ({
   return (
     <div>
       <IconWrapper>
-        <CodeOutlined fontSize={ICON_SIZE.L} />
+        <KeyboardHideOutlined fontSize={ICON_SIZE.L} />
         <h2>{subsection?.name}</h2>
       </IconWrapper>
       {(subsection as CommandListSubsection).commands && (

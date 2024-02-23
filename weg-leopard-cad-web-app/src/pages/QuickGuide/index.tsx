@@ -4,6 +4,13 @@ import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { Section, Subsection } from "../../models/QuickGuide";
 import { GuideCard, GuideCardContent, GuideSubCard } from "./styles";
 import { getIcon } from "../../services/IconServices";
+import { GlobalSmallImg, ICON_SIZE } from "../../styles/GlobalStyles";
+import {
+  CodeOutlined,
+  ComputerOutlined,
+  FileOpenOutlined,
+  KeyboardHideOutlined,
+} from "@mui/icons-material";
 
 const QuickGuide: React.FC<{
   setSelectedSubsection: (subsection: Subsection) => void;
@@ -42,18 +49,21 @@ const QuickGuide: React.FC<{
             <GuideCard.Title>
               <h3>{section.header}</h3>
             </GuideCard.Title>
-            <GuideCard.Text>{section.description}</GuideCard.Text>
+            <GuideCard.Text>
+              <div>{section.description}</div>
+            </GuideCard.Text>
             <GuideSubCard>
               {section.subsections?.map((subsection, subIndex) => (
                 <GuideCardContent
                   key={subIndex}
                   onClick={() => handleSubsectionClick(subsection)}
                 >
-                  {subsection.icon && (
-                    <img
-                      src={getIcon(subsection.icon)}
-                      height={25}
-                      alt="Icon"
+                  {subsection.icon ? (
+                    <GlobalSmallImg src={getIcon(subsection.icon)} />
+                  ) : (
+                    <KeyboardHideOutlined
+                      fontSize={ICON_SIZE.S}
+                      style={{ color: "var(--blue-100)" }}
                     />
                   )}
                   <h6>{subsection.name}</h6>

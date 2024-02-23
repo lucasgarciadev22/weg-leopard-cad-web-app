@@ -79,7 +79,8 @@ export default GlobalStyles;
 export const IconWrapper = styled("div")`
   min-width: fit-content;
   align-items: center;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   gap: 8px;
 `;
 
