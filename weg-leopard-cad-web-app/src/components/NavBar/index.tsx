@@ -24,6 +24,9 @@ const NavBar: React.FC = () => {
           <LinkContainer to="/quick-guide">
             <Nav.Link>Quick Guide</Nav.Link>
           </LinkContainer>
+          <LinkContainer to="/feedback">
+            <Nav.Link>Send Feedback</Nav.Link>
+          </LinkContainer>
         </Nav>
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>

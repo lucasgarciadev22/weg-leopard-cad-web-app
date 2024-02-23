@@ -8,6 +8,7 @@ import Navbar from "./components/NavBar";
 import GlobalStyles from "./styles/GlobalStyles";
 import SubsectionPage from "./pages/SubsectionPage";
 import { Subsection } from "./models/QuickGuide";
+import Feedback from "./pages/Feedback";
 
 const App: React.FC = () => {
   const [selectedSubsection, setSelectedSubsection] = useState<
@@ -35,6 +36,7 @@ const App: React.FC = () => {
                 <SubsectionPage receivedSubsection={selectedSubsection} />
               }
             />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
         </div>
       </Router>
