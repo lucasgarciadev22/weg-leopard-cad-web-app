@@ -2,6 +2,9 @@ import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { StyledForm } from "./styles";
+import EmailService, {
+  EmailOptions,
+} from "../../backend/services/EmailServices";
 
 const FeedbackForm: React.FC = () => {
   const [subject, setSubject] = useState("");
@@ -9,74 +12,69 @@ const FeedbackForm: React.FC = () => {
   const [selection, setSelection] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Dados do formulário:", { subject, message, selection, email });
+
+    // Configurar as opções do e-mail
+    const emailOptions: EmailOptions = {
+      from: email, // Usar o campo "Email" do formulário como remetente
+      to: "lucas10@weg.net",
+      // cc: ["leandrors@weg.net", "filipef@weg.net"],
+      subject,
+      text: `Email de: ${email}\nAssunto: ${subject}\nMensagem: ${message}\nTipo de feedback: ${selection}`,
+    };
+
+    const emailService = new EmailService();
+    await emailService.sendEmail(emailOptions);
+
+    // Limpar o formulário após o envio
     setSubject("");
     setMessage("");
     setSelection("");
     setEmail("");
+
+    console.log("Feedback enviado com sucesso!");
   };
 
   return (
     <StyledForm onSubmit={handleSubmit}>
       <TextField
-        label="Title"
+        label="Assunto"
         variant="outlined"
         value={subject}
-        onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-          setSubject(e.target.value)
-        }
-        InputProps={{
-          style: { backgroundColor: "var(--white-200)" },
-        }}
+        onChange={(e) => setSubject(e.target.value)}
       />
       <TextField
-        label="Message"
+        label="Mensagem"
         variant="outlined"
         multiline
         rows={4}
         value={message}
-        onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-          setMessage(e.target.value)
-        }
-        InputProps={{
-          style: { backgroundColor: "var(--white-200)" },
-        }}
+        onChange={(e) => setMessage(e.target.value)}
       />
       <TextField
         select
-        label="What's the feedback type?"
+        label="Tipo de feedback"
         variant="outlined"
         value={selection}
-        onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-          setSelection(e.target.value)
-        }
+        onChange={(e) => setSelection(e.target.value)}
         SelectProps={{
           native: true,
         }}
-        InputProps={{
-          style: { backgroundColor: "var(--white-200)" },
-        }}
       >
         <option value="Bug">Bug</option>
-        <option value="Suggestion">Suggestion</option>
-        <option value="Doubt">Doubt</option>
+        <option value="Sugestão">Sugestão</option>
+        <option value="Dúvida">Dúvida</option>
       </TextField>
       <TextField
-        label="Email"
+        label="Seu e-mail"
         variant="outlined"
         type="email"
         value={email}
-        onChange={(e: { target: { value: React.SetStateAction<string> } }) =>
-          setEmail(e.target.value)
-        }
-        InputProps={{
-          style: { backgroundColor: "var(--white-200)" },
-        }}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <Button variant="contained" color="primary" type="submit">
-        Send Feedback
+        Enviar Feedback
       </Button>
     </StyledForm>
   );

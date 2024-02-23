@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { fetchQuickGuideData } from "../../backend/axios/AxiosFuncs";
 import { Section, Subsection } from "../../models/QuickGuide";
 import { GuideCard, GuideCardContent, GuideSubCard } from "./styles";
-import { getIcon } from "../../services/IconServices";
+import { getIcon } from "../../backend/services/IconServices";
 import { GlobalSmallImg, ICON_SIZE } from "../../styles/GlobalStyles";
 import { KeyboardHideOutlined } from "@mui/icons-material";
 
