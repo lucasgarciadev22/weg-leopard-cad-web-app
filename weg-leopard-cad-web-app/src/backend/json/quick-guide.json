@@ -11,9 +11,9 @@
           "text": "",
           "shortcuts": "`A` or `Arc`",
           "steps": [
-            "1. Click on the screen or type the coordinate in the Command Line for the base point of the arc.",
-            "2. Click on the screen or type the coordinate in the Command Line for the curvature point of the arc.",
-            "3. Click on the screen or type the coordinate in the Command Line for the end point of the arc."
+            "1. Click on the screen or type the coordinate in the *Command Line* for the base point of the arc.",
+            "2. Click on the screen or type the coordinate in the *Command Line* for the curvature point of the arc.",
+            "3. Click on the screen or type the coordinate in the *Command Line* for the end point of the arc."
           ]
         },
         {
@@ -25,8 +25,8 @@
           ],
           "shortcuts": "`L ,LI or Line`",
           "steps": [
-            "1. Click on the screen or type the coordinate in the Command Line for the first point.",
-            "2. Click on the screen, type the coordinate in the Command Line, or pass the value of its length for the next points."
+            "1. Click on the screen or type the coordinate in the *Command Line* for the first point.",
+            "2. Click on the screen, type the coordinate in the *Command Line*, or pass the value of its length for the next points."
           ]
         }
       ]

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
+import Home from "./pages/Home";
+import About from "./pages/About";
 import ReleaseNotes from "./components/ReleaseNotes";
 import QuickGuide from "./components/QuickGuide";
 import Navbar from "./components/NavBar";
 import GlobalStyles from "./styles/GlobalStyles";
-import SubsectionPage from "./components/SubsectionPage";
+import SubsectionPage from "./pages/SubsectionPage";
 import { Subsection } from "./models/QuickGuide";
 
 const App: React.FC = () => {

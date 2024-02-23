@@ -10,7 +10,6 @@ const StyledTable = styled(Table)`
   /* Estilos globais da tabela */
   background-color: var(--gray-300);
   color: var(--text-color);
-  border-radius: 8px; /* Definindo o raio de borda como 8px */
 
   /* Estilos para células de cabeçalho */
   th {
@@ -27,13 +26,16 @@ const StyledTable = styled(Table)`
   tbody tr:hover {
     background-color: var(--yellow-200);
   }
+  border: dashed 2px var(--gray-200);
 `;
 
 export const ReleaseNotesTable: React.FC<StyledTableProps> = ({ children }) => {
   return (
-    <StyledTable striped bordered hover variant="dark">
-      {children}
-    </StyledTable>
+    <>
+      <StyledTable striped bordered hover variant="dark">
+        {children}
+      </StyledTable>
+    </>
   );
 };
 
