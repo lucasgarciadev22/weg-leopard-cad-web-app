@@ -39,30 +39,34 @@
           "type": "command-list-subsection",
           "name": "General Commands",
           "commands": [
-            "`[CLS, CLEAR]` - Limpar CommandLine",
-            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
-            "`[UNDO]` - Desfazer última alteração",
-            "`[REDO]` - Refazer última alteração"
+            "`[CLS, CLEAR]` - Clear CommandLine",
+            "`[UPDATEGRAPHICS]` - Update View Graphics",
+            "`[UNDO]` - Undo last change",
+            "`[REDO]` - Redo last change"
           ]
         },
         {
           "type": "command-list-subsection",
-          "name": "New Commands",
+          "name": "File Handler Commands",
           "commands": [
-            "`[CLS, CLEAR]` - Limpar CommandLine",
-            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
-            "`[UNDO]` - Desfazer última alteração",
-            "`[REDO]` - Refazer última alteração"
+            "`[NEW]` - New document",
+            "`[OPEN]` - Open existing document",
+            "`[CLOSE]` - Close active document",
+            "`[SAVEAS]` - Save as",
+            "`[BS, SAVE]` - Save overwrite",
+            "`[LAYERS]` - Open Layer Manager window"
           ]
         },
         {
           "type": "command-list-subsection",
-          "name": "Old Commands",
+          "name": "Zoom / Regen Commands",
           "commands": [
-            "`[CLS, CLEAR]` - Limpar CommandLine",
-            "`[UPDATEGRAPHICS]` - Atualiza os gráficos da View",
-            "`[UNDO]` - Desfazer última alteração",
-            "`[REDO]` - Refazer última alteração"
+            "`[Z, ZOOM]` - Start Zoom tool",
+            "`[Z+, ZOOMIN]` - Apply Zoom In",
+            "`[Z-, ZOOMOUT]` - Apply Zoom Out",
+            "`[ZE, ZOOMEX]` - Apply Zoom Extents",
+            "`[RE, REGEN]` - Regen - regenerates selected object",
+            "`[REA, REGENALL]` - Regen All - regenerates all objects in the document"
           ]
         }
       ]

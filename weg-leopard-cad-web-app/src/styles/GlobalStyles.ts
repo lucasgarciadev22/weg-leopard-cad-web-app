@@ -82,6 +82,7 @@ export const IconWrapper = styled("div")`
   display: flex;
   flex-direction: row;
   gap: 8px;
+  padding-bottom: 4px;
 `;
 
 export const GlobalSmallImg = styled.img`

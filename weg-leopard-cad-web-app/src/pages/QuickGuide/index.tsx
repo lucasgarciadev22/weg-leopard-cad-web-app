@@ -5,12 +5,7 @@ import { Section, Subsection } from "../../models/QuickGuide";
 import { GuideCard, GuideCardContent, GuideSubCard } from "./styles";
 import { getIcon } from "../../services/IconServices";
 import { GlobalSmallImg, ICON_SIZE } from "../../styles/GlobalStyles";
-import {
-  CodeOutlined,
-  ComputerOutlined,
-  FileOpenOutlined,
-  KeyboardHideOutlined,
-} from "@mui/icons-material";
+import { KeyboardHideOutlined } from "@mui/icons-material";
 
 const QuickGuide: React.FC<{
   setSelectedSubsection: (subsection: Subsection) => void;
@@ -35,7 +30,10 @@ const QuickGuide: React.FC<{
   const handleSubsectionClick = (subsection: Subsection) => {
     setSelectedSubsection(subsection);
     navigate(
-      `/quick-guide/${subsection.name.toLowerCase().replace(/\s+/g, "-")}`
+      `/quick-guide/${subsection.name
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/\//g, "-")}`
     );
   };
 
@@ -49,8 +47,8 @@ const QuickGuide: React.FC<{
             <GuideCard.Title>
               <h3>{section.header}</h3>
             </GuideCard.Title>
-            <GuideCard.Text>
-              <div>{section.description}</div>
+            <GuideCard.Text style={{ marginInlineStart: "16px" }}>
+              {section.description}
             </GuideCard.Text>
             <GuideSubCard>
               {section.subsections?.map((subsection, subIndex) => (
