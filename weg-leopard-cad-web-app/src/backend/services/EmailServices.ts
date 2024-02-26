@@ -1,4 +1,7 @@
-import nodemailer from "nodemailer";
+import { Type } from "typescript";
+
+const nodemailer = require("nodemailer");
+let transporter: Type = null;
 
 export interface EmailOptions {
   from: string;
@@ -8,12 +11,9 @@ export interface EmailOptions {
   text?: string;
   html?: string;
 }
-
 class EmailService {
-  private transporter: nodemailer.Transporter;
-
   constructor() {
-    this.transporter = nodemailer.createTransport({
+    transporter = nodemailer.createTransport({
       host: "smtp.example.com",
       port: 587, // Porta do servidor SMTP (pode variar)
       secure: false, // true para usar SSL/TLS seguro
@@ -26,7 +26,7 @@ class EmailService {
 
   async sendEmail(options: EmailOptions): Promise<void> {
     try {
-      await this.transporter.sendMail(options);
+      await transporter.sendMail(options);
       console.log("E-mail enviado com sucesso.");
     } catch (error) {
       console.error("Erro ao enviar e-mail:", error);
