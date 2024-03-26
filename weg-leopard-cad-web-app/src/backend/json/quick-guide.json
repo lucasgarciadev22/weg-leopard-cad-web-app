@@ -28,6 +28,19 @@
             "1. Click on the screen or type the coordinate in the *Command Line* for the first point.",
             "2. Click on the screen, type the coordinate in the *Command Line*, or pass the value of its length for the next points."
           ]
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Line Tool 2",
+          "icon": "line",
+          "text": [
+            "If only the length is passed for the second point onwards, the line will be a straight line, in `x`, which will have the passed value as the distance between its initial and final points."
+          ],
+          "shortcuts": "`L ,LI or Line`",
+          "steps": [
+            "1. Click on the screen or type the coordinate in the *Command Line* for the first point.",
+            "2. Click on the screen, type the coordinate in the *Command Line*, or pass the value of its length for the next points."
+          ]
         }
       ]
     },

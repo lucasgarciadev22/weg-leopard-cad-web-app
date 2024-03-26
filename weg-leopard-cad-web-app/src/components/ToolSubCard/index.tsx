@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Subsection, ToolSubsection } from "../../models/QuickGuide";
-import { getIcon } from "../../backend/services/IconServices";
+import { getIcon } from "../../backend/services/IconService";
 import {
   GlobalLargeImg,
   GlobalMediumImg,

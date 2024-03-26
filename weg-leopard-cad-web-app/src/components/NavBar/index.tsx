@@ -24,9 +24,9 @@ const NavBar: React.FC = () => {
           <LinkContainer to="/quick-guide">
             <Nav.Link>Quick Guide</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/feedback">
-            <Nav.Link>Send Feedback</Nav.Link>
-          </LinkContainer>
+          <Nav.Link href="https://forms.office.com/pages/responsepage.aspx?id=pmZmiNKoBEagApW2Ist-GM-3mVoPd1tFuw2ZboLYedJUOEJFRko1TUJFRURNRjhGUTI3UEVSTDEyVS4u">
+            Send Feedback
+          </Nav.Link>
         </Nav>
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>

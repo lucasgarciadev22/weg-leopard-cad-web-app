@@ -6,7 +6,8 @@ export const StyledForm = styled.form`
   gap: 16px;
   max-width: 400px;
   margin: 0 auto;
-  background-color: var(--gray-200);
+  background-color: var(--white-300);
+  color: var(--blue-100);
   padding: 20px;
   border-radius: 8px;
 `;

@@ -18,5 +18,11 @@ timeout /t 5 /nobreak >nul
 REM Navegar até o diretório onde está o código-fonte do frontend
 cd ..
 
-REM Iniciar o npm run start
-start /b npm run start
+REM Iniciar o servidor Express backend com nodemon na porta 3003
+start /b npm run start-backend
+
+REM Esperar 5 segundos para que o servidor Express backend inicie completamente antes de iniciar o frontend
+timeout /t 5 /nobreak >nul
+
+REM Iniciar o frontend na porta 3000
+start /b npm run start-frontend

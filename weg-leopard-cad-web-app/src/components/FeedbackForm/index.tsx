@@ -2,9 +2,8 @@ import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { StyledForm } from "./styles";
-import EmailService, {
-  EmailOptions,
-} from "../../backend/services/EmailServices";
+import { FeedbackFormData } from "../../models/Feedback";
+import EmailService from "../../backend/services/EmailService";
 
 const FeedbackForm: React.FC = () => {
   const [subject, setSubject] = useState("");
@@ -15,25 +14,28 @@ const FeedbackForm: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Configurar as opções do e-mail
-    const emailOptions: EmailOptions = {
-      from: email, // Usar o campo "Email" do formulário como remetente
+    const formData: FeedbackFormData = {
       to: "lucas10@weg.net",
-      // cc: ["leandrors@weg.net", "filipef@weg.net"],
+      selection: selection,
       subject,
-      text: `Email de: ${email}\nAssunto: ${subject}\nMensagem: ${message}\nTipo de feedback: ${selection}`,
+      email: email,
+      message: `Email de: ${email}\nAssunto: ${subject}\nMensagem: ${message}\nTipo de feedback: ${selection}`,
     };
 
-    const emailService = new EmailService();
-    await emailService.sendEmail(emailOptions);
+    try {
+      // const emailService = new EmailService();
+      // emailService.sendEmail(formData);
 
-    // Limpar o formulário após o envio
-    setSubject("");
-    setMessage("");
-    setSelection("");
-    setEmail("");
+      // Limpar o formulário após o envio
+      setSubject("");
+      setMessage("");
+      setSelection("");
+      setEmail("");
 
-    console.log("Feedback enviado com sucesso!");
+      console.log("Feedback enviado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao enviar feedback:", error);
+    }
   };
 
   return (
