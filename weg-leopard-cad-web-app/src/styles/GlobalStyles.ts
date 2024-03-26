@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
