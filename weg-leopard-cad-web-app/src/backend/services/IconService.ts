@@ -32,6 +32,16 @@ import rotate from "../../images/tool-icons/rotate.png";
 import scale from "../../images/tool-icons/scale.png";
 import stretch from "../../images/tool-icons/stretch.png";
 import trim from "../../images/tool-icons/trim.png";
+import diml from "../../images/tool-icons/dimlinear.png";
+import dimal from "../../images/tool-icons/dimaligned.png";
+import diman from "../../images/tool-icons/dimangular.png";
+import dimrad from "../../images/tool-icons/dimradius.png";
+import dimdia from "../../images/tool-icons/dimdiameter.png";
+import text from "../../images/tool-icons/single_dtext.png";
+import mtext from "../../images/tool-icons/mtext.png";
+import revcl from "../../images/tool-icons/revcloud.png";
+import revclrec from "../../images/tool-icons/revcloud.png";
+import table from "../../images/tool-icons/table.png";
 
 export function getIcon(iconName: string) {
   switch (iconName) {
@@ -103,6 +113,27 @@ export function getIcon(iconName: string) {
       return stretch;
     case "trim":
       return trim;
+    case "diml":
+      return diml;
+    case "dimal":
+      return dimal;
+    case "diman":
+      return diman;
+    case "dimrad":
+      return dimrad;
+    case "dimdia":
+      return dimdia;
+    case "text":
+      return text;
+    case "mtext":
+      return mtext;
+    case "revcl":
+      return revcl;
+    case "revclrec":
+      return revclrec;
+    case "table":
+      return table;
+
     default:
       throw new Error(`Ícone não encontrado para o nome '${iconName}'`);
   }
