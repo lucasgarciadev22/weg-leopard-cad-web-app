@@ -487,7 +487,7 @@
           "name": "Linear Dimension Tool",
           "icon": "diml",
           "text": [],
-          "shortcuts": "`DIML ` or `DimLinear`",
+          "shortcuts": "`DIML` or `DimLinear`",
           "steps": [
             "1. Click on the screen or type the coordinates in the *Command Line* for the starting point of the dimension",
             "2. Click on the screen or type the coordinates in the *Command Line* for the end point of the dimension to visualize the *preview*",
@@ -540,7 +540,7 @@
           "name": "Diametric Dimension Tool",
           "icon": "dimdia",
           "text": [],
-          "shortcuts": "`DIMD ` or `DimDiameter`",
+          "shortcuts": "`DIMD` or `DimDiameter`",
           "steps": [
             "1. Click on the radius point of the object (circle) to visualize the ***preview***",
             "2. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
@@ -637,149 +637,86 @@
       "subsections": [
         {
           "type": "tool-subsection",
-          "name": "Linear Dimension Tool",
-          "icon": "arc3pt",
+          "name": "Orbit Tool",
+          "icon": "orbit",
           "text": [],
-          "shortcuts": "`DIML ` or `DimLinear`",
+          "shortcuts": "`Orbit`",
           "steps": [
-            "1. Click on the screen or type the coordinates in the *Command Line* for the starting point of the dimension",
-            "2. Click on the screen or type the coordinates in the *Command Line* for the end point of the dimension to visualize the *preview*",
-            "3. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
-            "4. Edit the dimension text if desired and press *Enter* to confirm the creation of the dimension"
+            "1. Click and drag on the screen with the left mouse button along one of the axes to move the screen perspective"
           ]
         },
         {
           "type": "tool-subsection",
-          "name": "Aligned Dimension Tool",
-          "icon": "arcc",
-          "text": [],
-          "shortcuts": "`DIMAL` or `DimAligned`",
-          "steps": [
-            "1. Click on the screen or type the coordinates in the *Command Line* for the starting point of the dimension",
-            "2. Click on the screen or type the coordinates in the *Command Line* for the end point of the dimension to visualize the *preview*",
-            "3. You can also select points instead of objects with the *Aligned Dimension Tool*",
-            "4. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
-            "5. Edit the dimension text if desired and press *Enter* to confirm the creation of the dimension"
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Angular Dimension Tool",
-          "icon": "circle",
-          "text": [],
-          "shortcuts": "`DIMA` or `DimAngular`",
-          "steps": [
-            "1. Select the first entity",
-            "2. Select the second entity to visualize the *preview* of the angular dimension",
-            "3. You can also select points instead of objects with the *Angular Dimension Tool*",
-            "4. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
-            "5. Edit the dimension text if desired and press *Enter* to confirm the creation of the dimension"
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Radial Dimension Tool",
-          "icon": "xline",
-          "text": [],
-          "shortcuts": "`DIMR` or `DimRadius`",
-          "steps": [
-            "1. Click on the radius point of the object (circle, ellipse, arc, or polyline with fillet) to visualize the ***preview***",
-            "2. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
-            "3. Edit the dimension text if desired and press ***Enter*** to confirm the creation of the dimension"
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Diametric Dimension Tool",
-          "icon": "ellipsec",
-          "text": [],
-          "shortcuts": "`DIMD ` or `DimDiameter`",
-          "steps": [
-            "1. Click on the radius point of the object (circle) to visualize the ***preview***",
-            "2. Click on the screen or type the coordinates in the *Command Line* to confirm the final position of the dimension",
-            "3. Edit the dimension text if desired and press ***Enter*** to confirm the creation of the dimension"
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Single Text Tool",
-          "icon": "ellipseax",
+          "name": "Pan Tool",
+          "icon": "pan",
           "text": [
-            "1. Click on the screen or type the coordinates in the *Command Line* for text positioning, then the text editing window will open.",
-            "2. Configure and format your text, then click **Continue** to confirm the creation of the text.",
-            "",
-            "To use the Editing mode, follow these steps:",
-            "1. Select the text you wish to edit, and the text editing window will open.",
-            "2. Configure and format your text, then click **Continue** to confirm the creation of the text.",
-            "",
-            "To switch between *Create* and *Edit* modes, press *Enter* when opening the *Single Text Tool.*",
-            "**Note:** Line breaks are not allowed in the *Single Text Tool.* For multiline text, use the *Multiline Text Tool*."
+            "It can also be used at any time by pressing the middle mouse button;"
           ],
-          "shortcuts": "`TX` or `Text`",
+          "shortcuts": "`Pan`",
+          "steps": [
+            "1. Click and drag on the screen with the left mouse button to move the screen"
+          ]
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Regen All Tool",
+          "icon": "regenall",
+          "text": [
+            "By clicking on the icon or calling the command through the Command Line, the tool will regenerate all objects present in the document (including those not currently visible). Please note that this action may take some time as it impacts the program's performance."
+          ],
+          "shortcuts": "`REA` or `RegenAll`",
           "steps": []
         },
         {
           "type": "tool-subsection",
-          "name": "Multi Line Text Tool",
-          "icon": "ellipseac",
+          "name": "Regen Tool",
+          "icon": "regen",
           "text": [
-            "1. Click on the screen or type the coordinates in the *Command Line* for text positioning, then the text editing window will open. As we are in the *Multiline Text Tool,* there are more formatting and text configuration options available.",
-            "2. Configure and format your text, then click **Continue** to confirm the creation of the text.",
-            "",
-            "To use the Editing mode, follow these steps:",
-            "1. Select the text you wish to edit, and the text editing window will open.",
-            "2. Configure and format your text, then click **Continue** to confirm the creation of the text.",
-            "",
-            "To switch between *Create* and *Edit* modes, press *Enter* when opening the *Single Text Tool.*"
+            "By clicking on the icon or calling the command through the Command Line, the tool will regenerate all currently visible objects in the view."
           ],
-          "shortcuts": "`MTX` or `Multitext`",
+          "shortcuts": "`RE` or `Regen`",
           "steps": []
         },
         {
           "type": "tool-subsection",
-          "name": "Revision Cloud Freehand Tool",
-          "icon": "line",
-          "text": [],
-          "shortcuts": "`RECL` or `RevCloud`",
-          "steps": [
-            "1. To enter the *freehand* mode, type `F` when opening the *Revision Cloud* tool.",
-            "2. Type the starting and ending points of the first arc to define the spacing between arcs.",
-            "3. Without clicking, move the mouse and circle the area you want to highlight with the *Revision Cloud.* Move back with the mouse to erase in case of mistakes.",
-            "4. Click to close the cloud when near the initial point of the *Revision Cloud* to confirm the creation of the cloud."
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Revision Cloud Rectangle Tool",
-          "icon": "mline",
-          "text": [],
-          "shortcuts": "`RECLR` or `RevCloudRec`",
-          "steps": [
-            "1. Click on the screen or type the coordinates in the *Command Line* for the starting point of the rectangular cloud.",
-            "2. Click on the screen or type the coordinates in the *Command Line* for the ending point of the rectangular cloud to confirm the creation of the cloud."
-          ]
-        },
-        {
-          "type": "tool-subsection",
-          "name": "Table Tool",
-          "icon": "point",
+          "name": "Zoom Tool",
+          "icon": "zoom",
           "text": [
-            "1. The window that opens will offer various table configuration options, having the following properties available for modification:",
-            "   - a. Number of columns;",
-            "   - b. Number of rows;",
-            "   - c. Column width;",
-            "   - d. Row height;",
-            "   - e. Whether the table will be uniformed;",
-            "   - f. Whether the text in the table will wrap or not when it reaches the cell's limit;",
-            "   - g. The coordinates where the table will be created in the drawing.",
-            "2. The buttons next to and below the preview are used to add or remove one column or one row at a time, respectively.",
-            "3. The button next to the coordinate information is used to directly obtain the coordinates from the drawing. When clicked, the modal will close and the user will be prompted to click where they want the insertion point of the table to be.",
-            "   - a. ",
-            "4. As the settings change, the preview next to it will be updated according to the current configuration.",
-            "5. Each cell of the preview table can have text, requiring only to type it inside the cell's text box.",
-            "6. To finalize the creation of the table, simply click on *Continue*."
+            "It can be used at any time by using the scroll available on the middle mouse button."
           ],
-          "shortcuts": "`TB` or `Table`",
+          "shortcuts": "`Z` or `Zoom`",
+          "steps": [
+            "1. Create a selection on the screen of the area where you want to apply the zoom."
+          ]
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Zoom Extents Tool",
+          "icon": "zoomex",
+          "text": [
+            "Clicking on the icon or calling the command via the Command Line, the tool will perform a zoom that will center all objects on the screen."
+          ],
+          "shortcuts": "`ZE` or `ZoomEx`",
+          "steps": []
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Zoom In Tool",
+          "icon": "zoomin",
+          "text": [
+            "When clicking on the icon or calling the command via the Command Line, the tool will zoom in on the active area of the document."
+          ],
+          "shortcuts": "`Z+` or `ZoomIn`",
+          "steps": []
+        },
+        {
+          "type": "tool-subsection",
+          "name": "Zoom Out Tool",
+          "icon": "zoomout",
+          "text": [
+            "When clicking on the icon or calling the command via the Command Line, the tool will zoom out on the active area of the document."
+          ],
+          "shortcuts": "`Z-` or `ZoomOut`",
           "steps": []
         }
       ]

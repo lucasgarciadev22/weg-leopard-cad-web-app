@@ -42,6 +42,14 @@ import mtext from "../../images/tool-icons/mtext.png";
 import revcl from "../../images/tool-icons/revcloud.png";
 import revclrec from "../../images/tool-icons/revcloud.png";
 import table from "../../images/tool-icons/table.png";
+import orbit from "../../images/tool-icons/gizmo_rotate.png";
+import pan from "../../images/tool-icons/pan_new.png";
+import regen from "../../images/tool-icons/regen_view.png";
+import regenall from "../../images/tool-icons/regen_view.png";
+import zoom from "../../images/tool-icons/zoom.png";
+import zoomex from "../../images/tool-icons/zoom_extents.png";
+import zoomin from "../../images/tool-icons/zoom_in.png";
+import zoomout from "../../images/tool-icons/zoom_out.png";
 
 export function getIcon(iconName: string) {
   switch (iconName) {
@@ -133,7 +141,22 @@ export function getIcon(iconName: string) {
       return revclrec;
     case "table":
       return table;
-
+    case "orbit":
+      return orbit;
+    case "pan":
+      return pan;
+    case "regen":
+      return regen;
+    case "regenall":
+      return regenall;
+    case "zoom":
+      return zoom;
+    case "zoomex":
+      return zoomex;
+    case "zoomin":
+      return zoomin;
+    case "zoomout":
+      return zoomout;
     default:
       throw new Error(`Ícone não encontrado para o nome '${iconName}'`);
   }
