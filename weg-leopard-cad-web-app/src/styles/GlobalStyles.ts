@@ -107,3 +107,8 @@ export enum ICON_SIZE {
   M = "medium",
   S = "small",
 }
+
+export const TextWrapper = styled.div`
+  margin: 1px;
+  padding: 1px;
+`;

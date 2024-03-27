@@ -1,45 +1,23 @@
 {
   "release-notes": [
     {
+      "version": "23.0.5",
+      "mainChanges": [
+        "📦 This is the #2 preview for the new SWIG packages. ⚠️ Use it at your own risk.",
+        "New Table tool",
+        "Bugfix for command line culture parser and submodes",
+        "Reimplemented Properties Palette",
+        "Reimplemented several Views and ViewModels to XAML behaviours (on going task to remove Caliburn)",
+        "Improved overall performance & safety"
+      ]
+    },
+    {
       "version": "23.0.1 - 23.0.4",
       "mainChanges": [
         "📦 This is the #1 preview for the new SWIG packages. ⚠️ Use it at your own risk.",
         "New features of highlight",
         "Reimplementations of several tools",
         "New minor features for several tools",
-        "Improved overall performance & safety"
-      ]
-    },
-    {
-      "version": "23.0.5",
-      "mainChanges": [
-        "📦 This is the #2 preview for the new SWIG packages. ⚠️ Use it at your own risk.",
-        "New Table tool",
-        "Bugfix for command line culture parser and submodes",
-        "Reimplemented Properties Palette",
-        "Reimplemented several Views and ViewModels to XAML behaviours (on going task to remove Caliburn)",
-        "Improved overall performance & safety"
-      ]
-    },
-    {
-      "version": "23.0.5",
-      "mainChanges": [
-        "📦 This is the #2 preview for the new SWIG packages. ⚠️ Use it at your own risk.",
-        "New Table tool",
-        "Bugfix for command line culture parser and submodes",
-        "Reimplemented Properties Palette",
-        "Reimplemented several Views and ViewModels to XAML behaviours (on going task to remove Caliburn)",
-        "Improved overall performance & safety"
-      ]
-    },
-    {
-      "version": "23.0.5",
-      "mainChanges": [
-        "📦 This is the #2 preview for the new SWIG packages. ⚠️ Use it at your own risk.",
-        "New Table tool",
-        "Bugfix for command line culture parser and submodes",
-        "Reimplemented Properties Palette",
-        "Reimplemented several Views and ViewModels to XAML behaviours (on going task to remove Caliburn)",
         "Improved overall performance & safety"
       ]
     }

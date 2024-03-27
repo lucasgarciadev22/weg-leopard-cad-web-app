@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       <br />
       <h1>Welcome to WEG Leopard CAD Center</h1>
       <br />
-      <Button variant="outlined" color="success" onClick={handleDownloadClick}>
+      <Button variant="contained" color="success" onClick={handleDownloadClick}>
         <DownloadOutlined />
         Download Leopard
       </Button>

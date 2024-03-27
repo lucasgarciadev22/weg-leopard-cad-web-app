@@ -5,9 +5,9 @@ import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Subsection, ToolSubsection } from "../../models/QuickGuide";
 import { getIcon } from "../../backend/services/IconService";
 import {
-  GlobalLargeImg,
   GlobalMediumImg,
   IconWrapper,
+  TextWrapper,
 } from "../../styles/GlobalStyles";
 
 const ToolSubCard: React.FC<{ subsection: Subsection }> = ({ subsection }) => {
@@ -35,7 +35,7 @@ const ToolSubCard: React.FC<{ subsection: Subsection }> = ({ subsection }) => {
         {(subsection as ToolSubsection).text && (
           <>
             {subsection?.text.map((text, index) => (
-              <div key={index}>
+              <TextWrapper key={index}>
                 {text.startsWith("```csharp") ? (
                   <SyntaxHighlighter language="csharp" style={atomDark}>
                     {text.replace("```csharp", "")}
@@ -47,7 +47,7 @@ const ToolSubCard: React.FC<{ subsection: Subsection }> = ({ subsection }) => {
                 ) : (
                   <ReactMarkdown>{text}</ReactMarkdown>
                 )}
-              </div>
+              </TextWrapper>
             ))}
           </>
         )}
