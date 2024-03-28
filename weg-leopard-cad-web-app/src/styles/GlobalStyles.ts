@@ -47,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-      padding: 4px;
+      padding: 2px;
       border-radius: 4px;
     background-color: var(--code-background-color); 
     color: var(--yellow-100); 

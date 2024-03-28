@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { CommandListSubsection, Subsection } from "../../models/QuickGuide";
-import { CodeOutlined, KeyboardHideOutlined } from "@mui/icons-material";
+import { KeyboardHideOutlined } from "@mui/icons-material";
 import { ICON_SIZE, IconWrapper } from "../../styles/GlobalStyles";
 
 const CommandSubCard: React.FC<{ subsection: Subsection }> = ({

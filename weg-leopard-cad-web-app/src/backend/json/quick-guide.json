@@ -723,11 +723,12 @@
     },
     {
       "header": "Working with Command Line",
-      "description": "Quick guide about using commands in Leopard. In this section we're covering all the built-in commands already present in Leopard (in the future should be even more), but you can also create your own command scripts using Leopard Interop)",
+      "description": "Quick guide about using commands in Leopard. In this section we're covering all the built-in commands already present in Leopard (in the future should be even more), but you can also create your own command scripts using Leopard Interop)\n The Leopard Command Line is initialized by default when creating or opening a new document. However, it's possible to activate/deactivate its display using the button in the **View → Command Line** tab.\nThe Command Line will always be displayed to start and/or cancel the use of a tool. It greatly facilitates the use of Leopard, and it's recommended to perform most operations through it. With the Command Line, you can monitor the results of each step of using a tool and manipulate various files and objects present in the document.\n\n### Types of input accepted by the Command Line\n- Absolute coordinate → typing `2.35,4.65` in the input, the Command Line will interpret it as `X: 2.35 - Y: 4.65`\n- Dynamic coordinate → typing `@2,4` in the input (after selecting a previous point), the Command Line will add `+2` to `X` and `+4` to `Y`. Imagine the previous point is `X: 2.35 - Y: 4.65`, after typing the dynamic coordinate, a new point will be created, with the value `X: 2 + 2.35 - Y: 4 + 4.65`, in other words `X: 4.35 - Y: 8.65`\n- Numeric values for distance, scale, and other factors → in some steps of certain tools, it's possible to input direct values to determine distances, sizes, scales, radii, and factors\n- Textual values for names → in some steps of certain tools, it's possible to input text values to define object names and dimensions\n- The *Command Line* understands the initials of each command in uppercase, so it's not necessary to write the command in full to save time. For example, the `[Arc]` command to activate the sub-mode of the *Poly Line* tool for drawing arcs can be called by simply typing `A` and pressing `Enter`.",
       "subsections": [
         {
           "type": "command-list-subsection",
           "name": "General Commands",
+          "text": [],
           "commands": [
             "`[CLS, CLEAR]` - Clear CommandLine",
             "`[UPDATEGRAPHICS]` - Update View Graphics",
@@ -738,6 +739,7 @@
         {
           "type": "command-list-subsection",
           "name": "File Handler Commands",
+          "text": [],
           "commands": [
             "`[NEW]` - New document",
             "`[OPEN]` - Open existing document",
@@ -750,6 +752,7 @@
         {
           "type": "command-list-subsection",
           "name": "Zoom / Regen Commands",
+          "text": [],
           "commands": [
             "`[Z, ZOOM]` - Start Zoom tool",
             "`[Z+, ZOOMIN]` - Apply Zoom In",
@@ -757,6 +760,78 @@
             "`[ZE, ZOOMEX]` - Apply Zoom Extents",
             "`[RE, REGEN]` - Regen - regenerates selected object",
             "`[REA, REGENALL]` - Regen All - regenerates all objects in the document"
+          ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "View Commands",
+          "text": [],
+          "commands": [
+            "`[PAN]` - Initiates Pan tool",
+            "`[ORBIT]` - Initiates Orbit tool"
+          ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "Draw Commands",
+          "text": [],
+          "commands": [
+            "`[L, LINE]` - Initiates Line tool",
+            "`[ELC, ELLIPSEC]` - Initiates Ellipse Center tool",
+            "`[ELAXE, ELLIPSEAXIS]` - Initiates Ellipse Axis End tool",
+            "`[ELARC, ELLIPSEARC]` - Initiates Ellipse Arc tool",
+            "`[PL, PLINE]` - Initiates Polyline tool",
+            "`[A, ARC]` - Initiates Arc tool",
+            "`[AC, ARCC]` - Initiates Arc Center tool",
+            "`[ML, MLINE]` - Initiates Multi Line tool",
+            "`[R, REC, RECTANGLE]` - Initiates Rectangle tool",
+            "`[PT, POINT]` - Initiates Point tool",
+            "`[SPL, SPLINE]` - Initiates Spline tool",
+            "`[POL, POLYGON]` - Initiates Polygon tool",
+            "`[XL, XLINE]` - Initiates Construction Line tool",
+            "`[RAY]` - Initiates Ray tool"
+          ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "Modify Commands",
+          "text": [],
+          "commands": [
+            "`[ER, ERASE]` - Initiates Erase tool",
+            "`[EX, EXPLODE]` - Initiates Explode tool",
+            "`[CP, COPY]` - Initiates Copy tool",
+            "`[MR, MIRROR]` - Initiates Mirror tool",
+            "`[MO, MOVE]` - Initiates Move tool",
+            "`[RT, ROTATE]` - Initiates Rotate tool",
+            "`[SC, SCALE]` - Initiates Scale tool",
+            "`[RG, REGION]` - Initiates Region tool",
+            "`[JN, JOIN]` - Initiates Join tool",
+            "`[ET, EXTEND]` - Initiates Extend tool",
+            "`[ST, STRETCH]` - Initiates Stretch tool",
+            "`[BK, BREAK]` - Initiates Break tool",
+            "`[BKP, BREAKPT]` - Initiates Break At Point tool",
+            "`[FL, FILLET]` - Initiates Fillet tool",
+            "`[CH, CHAMFER]` - Initiates Chamfer tool",
+            "`[TR, TRIM]` - Initiates Trim tool",
+            "`[BL, BLOCK]` - Initiates Block tool",
+            "`[AY, ARRAY]` - Initiates Array tool",
+            "`[GD, HT, FILL]` - Initiates Gradient tool"
+          ]
+        },
+        {
+          "type": "command-list-subsection",
+          "name": "Annotation Commands",
+          "text": [],
+          "commands": [
+            "`[TX, TEXT]` - Initiates Single Text tool",
+            "`[MTX, MTEXT]` - Initiates Multi Text tool",
+            "`[DIML, DIMLINEAR]` - Initiates Linear Dimension tool",
+            "`[DIMD, DIMDIAMETER]` - Initiates Diametric Dimension tool",
+            "`[DIMR, DIMRADIUS]` - Initiates Radial Dimension tool",
+            "`[DIMA, DIMANGULAR]` - Initiates Angular Dimension tool",
+            "`[DIMAL, DIMALIGNED]` - Initiates Aligned Dimension tool",
+            "`[REVCL, REVCLOUD]` - Initiates Revision Cloud tool",
+            "`[REVCLREC, REVCLOUDRECTANGLE]` - Initiates Revision Cloud Rectangle tool"
           ]
         }
       ]
