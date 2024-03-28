@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Leopard Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Leopard Web App! This platform serves as a central hub for users to access information, seek assistance, provide feedback, and explore documentation related to the Leopard software. Additionally, users can download an installer setup that fetches the latest version of Leopard directly from the current network.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Information Hub:** Access basic instructions, FAQs, and guides for beginners.
+- **Support and Feedback:** Seek assistance, report issues, and provide feedback on the software.
+- **Documentation:** Explore comprehensive documentation on how to use various features and tools in Leopard.
+- **Download Installer:** Download the installer setup to install the latest version of Leopard seamlessly.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To get started with the Leopard Web App, simply navigate to the provided URL and explore the available features.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Support and Feedback
 
-### `npm test`
+If you encounter any issues, have questions, or would like to provide feedback, please use the following methods to reach out to us:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **FAQs:** Check out the frequently asked questions section for common use.
+- **Feedback Form:** Fill out the contact form to submit your queries, feedback, or issues.
 
-### `npm run build`
+## Documentation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Explore the comprehensive documentation to learn how to use various features and tools in Leopard. The documentation covers topics such as:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Tool functionalities
+- Command Line usage
+- Drawing and manipulation techniques
+- Customization options
+- And more!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Download Installer
 
-### `npm run eject`
+Download the installer setup to easily install the latest version of Leopard on your device. The installer fetches the most recent version directly from the current network, ensuring you have access to the latest features and improvements.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Stay Updated
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Keep an eye on our website and social media channels for announcements, updates, and new releases of Leopard.
