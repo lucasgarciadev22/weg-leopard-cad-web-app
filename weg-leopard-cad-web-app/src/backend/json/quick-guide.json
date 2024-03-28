@@ -230,11 +230,11 @@
             "    - b. Specify the number of rows and columns where the copies will be distributed",
             "    - c. Then, specify the row and column spacings, also specify the rotation of the array of objects.",
             "3. Polar Mode:",
-            "    1. Select the Objects you want to copy (recommended to select only 1 as a reference for the copies)",
-            "    2. Specify the central point of radial distribution of the copies",
-            "    3. Select the distribution method",
-            "    4. Specify the number of copies to be generated in the array",
-            "    5. Specify the total angle of the polar array"
+            "    - a. Select the Objects you want to copy (recommended to select only 1 as a reference for the copies)",
+            "    - b. Specify the central point of radial distribution of the copies",
+            "    - c. Select the distribution method",
+            "    - d. Specify the number of copies to be generated in the array",
+            "    - e. Specify the total angle of the polar array"
           ],
           "shortcuts": "`AY ` or `Array`",
           "steps": []

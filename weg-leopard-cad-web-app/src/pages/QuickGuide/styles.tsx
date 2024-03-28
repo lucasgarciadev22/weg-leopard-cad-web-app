@@ -3,16 +3,15 @@ import styled from "styled-components";
 
 export const GuideCard = styled(Card)`
   background-color: var(--gray-300);
+  display: flex;
   margin-top: 16px;
   border-radius: 8px;
-  min-width: fit-content;
 `;
 
 export const GuideSubCard = styled(Card)`
   display: "flex";
   flex-direction: row;
-  flex-wrap: "wrap";
-  min-width: fit-content;
+  flex-wrap: wrap;
   background-color: var(--gray-300);
   margin-top: 16px;
   border-radius: 8px;
@@ -22,9 +21,13 @@ export const GuideSubCard = styled(Card)`
 
 export const GuideCardContent = styled(CardBody)`
   background-color: var(--gray-200);
-  max-width: fit-content;
+  max-width: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  max-height: 120px;
+  padding: 8px;
   display: inline-flexbox;
-  align-items: center;
+  flex-wrap: wrap;
   border-radius: 8px;
   cursor: pointer;
 `;
